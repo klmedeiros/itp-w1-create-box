@@ -2,8 +2,7 @@
 
 
 def create_box(height, width, character):
-    pass
-
+    return (character*width + '\n')*height
 
 if __name__ == '__main__':
     create_box(3, 4, '*')
