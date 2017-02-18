@@ -18,6 +18,14 @@ xxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxx
 """.lstrip()
 
+fourth_box_expected = """
+$$$$$$
+$$$$$$
+$$$$$$
+$$$$$$
+$$$$$$
+""".lstrip()
+
 
 class TestCreateBox(unittest.TestCase):
     def test_box(self):
@@ -29,3 +37,6 @@ class TestCreateBox(unittest.TestCase):
     # Add your own test using third_box_expected
     def test_third_box(self):
         self.assertEqual(create_box(3, 24, 'x'), third_box_expected)
+        
+    def test_fourth_box(self):
+        self.assertEqual(create_box(5, 6, '$'), fourth_box_expected)
